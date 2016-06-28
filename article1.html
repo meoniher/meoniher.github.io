@@ -214,6 +214,9 @@ obj = open("D:\\mybegin\items20160605.json", "r") #打开存放数据的json文�
 all_txt = obj.read() </br>
 new_txt = eval(all_txt) </br>
 </br> 
+	</blockquote >	
+先来初始化key的个数	</br>
+    <blockquote>
 keys = [] </br>
 for key in new_txt[0].keys() : </br>
 &nbsp;&nbsp;&nbsp;&nbsp;     keys.append(key); </br>
@@ -221,12 +224,17 @@ keys.sort() </br>
 </br> 
 i = 0 </br>
 </br>
-#先把属性名称写入excel的第一行</br>
+	</blockquote >
+	
+把属性名称写入excel的第一行</br>
+    <blockquote>
 for k in keys: </br>
 &nbsp;&nbsp;&nbsp;&nbsp;     dickkey=str(k) </br>
 &nbsp;&nbsp;&nbsp;&nbsp;     sheet.write(0, i, dickkey) </br>
 &nbsp;&nbsp;&nbsp;&nbsp;     i += 1 </br>
-</br>
+	</blockquote ></br>
+接下来就要把没个字典键值里面的数值写入每个对应的属性里面啦</br>
+    <blockquote>	
 for a in range(347):#有多少行数据 </br>
 &nbsp;&nbsp;&nbsp;&nbsp;     i=0 #列 </br>
 &nbsp;&nbsp;&nbsp;&nbsp;     j = a+1 #行 </br>
@@ -251,7 +259,8 @@ wbk.save('20160605.xls') #保存为 xls文件 </br>
 		</p>
 	</blockquote >	
 	
-	
+</br>	
+这样就转换成了便于浏览的excel格式了，要不要试试？
 	
         </div>
     </a>
@@ -286,7 +295,42 @@ wbk.save('20160605.xls') #保存为 xls文件 </br>
                 
     		</div>
         
-
+                <!-- 多说 Share start -->
+				<div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="./biaobai"
+                    data-title="“5.20” 程序员这样表白"
+                    data-url="http://binmen.github.io/blogs/biaobai"
+                    data-content="使用R绘制浪漫的心形图，可以根据自己的需要定制文字，有没有心动" >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="./article1" data-title="字典类型数据转换到Excel里" data-url="./article1.html"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"meoniher"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+<!-- 多说公共JS代码 end -->
 
 
     <!-- Footer -->
@@ -359,42 +403,7 @@ wbk.save('20160605.xls') #保存为 xls文件 </br>
 
 
 
-                <!-- 多说 Share start -->
-				<div class="ds-share"
-                    style="text-align: right"
-                    data-thread-key="./biaobai"
-                    data-title="“5.20” 程序员这样表白"
-                    data-url="http://binmen.github.io/blogs/biaobai"
-                    data-content="使用R绘制浪漫的心形图，可以根据自己的需要定制文字，有没有心动" >
-                    <div class="ds-share-inline">
-                      <ul  class="ds-share-icons-16">
-                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
-                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
-                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
-                      </ul>
-                      <div class="ds-share-icons-more">
-                      </div>
-                    </div>
-                <hr>
-                </div>
-                <!-- 多说 Share end-->
-<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="./article1" data-title="请替换成文章的标题" data-url="./article1.html"></div>
-<!-- 多说评论框 end -->
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-var duoshuoQuery = {short_name:"meoniher"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-<!-- 多说公共JS代码 end -->
+
 
 <!-- Side Catalog -->
 
